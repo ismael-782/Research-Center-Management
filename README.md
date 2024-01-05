@@ -2,13 +2,14 @@
 ## Overview
 The Research Center Management System is a web-based application designed to streamline the operations of research centers, specifically tailored for the needs of the KFUPM Research Center. This system aims to replace manual tracking methods, such as Excel sheets and paper, with an efficient and user-friendly platform for managing projects, teams, members, and machines.
 
-![Screenshot 2023-12-15 194936](https://github.com/ismael-782/Research_Cetner_Management_System/assets/111667195/d0f70d0d-a054-419f-aedd-668c11fcfdeb)
+![Screenshot 2023-12-15 194936](https://github.com/ismael-782/Research-Center-Management/assets/111667195/9279aa85-a608-4734-acff-1304bf9a20fa)
+
 
 # Key Features
 ### Statistics:
 
 A page that shows the admin all statistics related to projects, teams, and machines (The Member can not access those features)
-![Screenshot 2023-12-15 195013](https://github.com/ismael-782/Research_Cetner_Management_System/assets/111667195/f6b90d87-9698-48c7-b50a-2a6741610377)
+![Screenshot 2023-12-15 195013](https://github.com/ismael-782/Research-Center-Management/assets/111667195/ade293ef-b25c-4bb1-b53e-4163abed806b)
 
 
 ### Project Management:
@@ -16,21 +17,23 @@ A page that shows the admin all statistics related to projects, teams, and machi
 Add new projects and assign teams with leaders and members.
 Keep track of project details, including team assignments.
 
-![Screenshot 2023-12-15 195131](https://github.com/ismael-782/Research_Cetner_Management_System/assets/111667195/d632da01-d713-499b-a733-5feac9b972ba)
+![Screenshot 2023-12-15 195131](https://github.com/ismael-782/Research-Center-Management/assets/111667195/5ac9a2ce-0031-4d65-84bb-3ab5421c48d1)
 
 ### Member Management:
 
 Add new members with details such as name, email, and research interests.
 Members can be part of multiple teams.
 
-![Screenshot 2023-12-15 195244](https://github.com/ismael-782/Research_Cetner_Management_System/assets/111667195/5e248a2a-7e55-4842-98ae-33566754eac8)
+![Screenshot 2023-12-15 195244](https://github.com/ismael-782/Research-Center-Management/assets/111667195/2bc4802e-039e-46f0-bfd7-cdaf93537cd9)
+
 
 ### Machine Management:
 
 Add new machines with names and suggested usage based on research interests.
 Implement a timetable/work schedule for machine reservations.
 
-![Screenshot 2023-12-15 195315](https://github.com/ismael-782/Research_Cetner_Management_System/assets/111667195/d199f8c0-b0f5-49e6-92c7-44426a294fee)
+![Screenshot 2023-12-15 195315](https://github.com/ismael-782/Research-Center-Management/assets/111667195/a6ab4910-313d-4459-a745-0d9d6c72b602)
+
 
 ### User Authentication:
 
@@ -49,17 +52,21 @@ Members can reserve machines for their projects if available at the requested ti
 
 First  Page:
 
-https://github.com/ismael-782/Research_Cetner_Management_System/assets/111667195/a64bd959-6bbe-444c-b76c-36ac7553ad1f
+
+https://github.com/ismael-782/Research-Center-Management/assets/111667195/efc64b6f-848d-4c12-b4c2-8533b76fb10f
+
 
 Second Page: 
 
 
-https://github.com/ismael-782/Research_Cetner_Management_System/assets/111667195/40a21b56-2203-4347-b8e0-6adfb57e6175
+https://github.com/ismael-782/Research-Center-Management/assets/111667195/8daf6add-50b7-4f42-888f-3828f384499a
+
 
 Third Page: 
 
 
-https://github.com/ismael-782/Research_Cetner_Management_System/assets/111667195/53592e2d-9486-49d6-9836-167dde5aebf9
+https://github.com/ismael-782/Research-Center-Management/assets/111667195/13867cd3-9278-42b3-9ec1-32352daca5e6
+
 
 
 
