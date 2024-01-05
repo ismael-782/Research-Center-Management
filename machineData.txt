@@ -1,0 +1,7 @@
+SynthoLab,Computational research
+XenoProbe,Genomic research
+NanoAnalytica,Quantum computing
+ClimateSense,Robotics
+RoboVisionary,Nanotechnology
+QuantumLink,High-energy
+,

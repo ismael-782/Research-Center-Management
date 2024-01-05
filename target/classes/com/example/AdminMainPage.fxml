@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.AdminMainPageController">
+   <left>
+      <AnchorPane prefHeight="700.0" prefWidth="286.0" style="-fx-background-color: linear-gradient(to bottom right, #4c00ff 0%, #4c00ff 3%, #4c00ff 12%, #4c00ff 21%, #0fff8f 100%); -fx-border-color: #000; -fx-border-width: .4px 0px .4px .4px; -fx-background-radius: 0 80 80 0;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="112.0" fitWidth="150.0" layoutX="86.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Admin%20pic.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="49.0" layoutY="184.0" text="Welcome Admin">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Line endX="116.0" layoutX="136.0" layoutY="259.0" startX="-100.0" />
+            <Button fx:id="ManageMachineButton" layoutX="31.0" layoutY="473.0" mnemonicParsing="false" onAction="#swichPage" prefHeight="54.0" prefWidth="223.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-family: Arial; -fx-font-size: 14px; -fx-text-fill: #000; -fx-alignment: CENTER-LEFT; -fx-border-color: #000000;" text=" Manage Machines">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imgs/Machines.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="LogOut" layoutX="23.0" layoutY="660.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: #219a6a;" text="Log out">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imgs/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="ManageProjectButton" layoutX="32.0" layoutY="348.0" mnemonicParsing="false" onAction="#swichPage" prefHeight="54.0" prefWidth="221.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-family: Arial; -fx-font-size: 14px; -fx-text-fill: #000; -fx-alignment: CENTER-LEFT; -fx-border-color: #000000;" text=" Manage Projects">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imgs/project.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="ManageTeamsButton" layoutX="31.0" layoutY="411.0" mnemonicParsing="false" onAction="#swichPage" prefHeight="54.0" prefWidth="224.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-family: Arial; -fx-font-size: 14px; -fx-text-fill: #000; -fx-alignment: CENTER-LEFT; -fx-border-color: #000000;" text=" Manage Teams">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imgs/Teams.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="ShowStatisticsButton" layoutX="33.0" layoutY="287.0" mnemonicParsing="false" onAction="#swichPage" prefHeight="54.0" prefWidth="221.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-family: Arial; -fx-font-size: 14px; -fx-text-fill: #000; -fx-alignment: CENTER-LEFT; -fx-border-color: #000000;" text="Statistics (Home Page)">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imgs/Statistics.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="HomePage" layoutY="-2.0" prefHeight="703.0" prefWidth="1114.0" visible="false">
+               <children>
+                  <AnchorPane layoutX="570.0" layoutY="286.0" prefHeight="397.0" prefWidth="524.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0); -fx-background-color: #fff; -fx-background-radius: 50;">
+                     <children>
+                        <TableView fx:id="p1_TeamsTable" layoutX="4.0" layoutY="75.0" prefHeight="287.0" prefWidth="519.0" style="-fx-background-color: transparebt; -fx-background-insets: 0 0 0 0; -fx-background-radius: 8px 8px 0px 0px;">
+                          <columns>
+                            <TableColumn fx:id="TeamsTable_TeamName" prefWidth="164.5333251953125" text="Team Name" />
+                            <TableColumn fx:id="TeamsTable_LeaderName" minWidth="9.06658935546875" prefWidth="184.2666015625" text="Leader Name" />
+                              <TableColumn fx:id="TeamsTable_NumOfMembers" prefWidth="168.79997558593755" text="Number of Members" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="p1_ShowTeamsInfo" layoutX="27.0" layoutY="26.0" mnemonicParsing="false" onAction="#showTeamsInfo" prefHeight="40.0" prefWidth="226.0" style="-fx-background-color: #456984;" text="Show Teams Information" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="p1_ShowProjectsInfo" layoutX="272.0" layoutY="26.0" mnemonicParsing="false" onAction="#showProjectsInfo" prefHeight="40.0" prefWidth="226.0" style="-fx-background-color: #456984;" text="Show Project Information" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="p1_ProjectTable" layoutX="10.0" layoutY="85.0" prefHeight="284.0" prefWidth="503.0" style="-fx-background-color: transparent;" visible="false">
+                          <columns>
+                            <TableColumn fx:id="ProjectTable_ProjectName" prefWidth="261.5999755859375" text="Project Name" />
+                            <TableColumn fx:id="ProjectTable_NumOfResMachines" prefWidth="240.79998779296875" text="Number of Machines Reserved for it" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="16.0" layoutY="284.0" prefHeight="400.0" prefWidth="508.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0); -fx-background-color: #fff; -fx-background-radius: 50;">
+                     <children>
+                        <BarChart fx:id="Numbers_Chart" layoutX="9.0" layoutY="27.0" prefHeight="373.0" prefWidth="474.0" title="Numbers Statistics">
+                          <xAxis>
+                            <CategoryAxis prefHeight="37.0" prefWidth="418.0" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="13.0" layoutY="21.0" prefHeight="246.0" prefWidth="1087.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0); -fx-background-color: #fff; -fx-background-radius: 50;">
+                     <children>
+                        <AnchorPane layoutX="19.0" layoutY="24.0" prefHeight="200.0" prefWidth="325.0" style="-fx-background-color: linear-gradient(to bottom right, #1638e3, #39c994); -fx-background-radius: 30;">
+                           <children>
+                              <Label layoutX="46.0" layoutY="74.0" prefHeight="67.0" prefWidth="282.0" text=" Top 3 Active Members">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="72.0" fitWidth="74.0" layoutX="140.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Imgs/ranking-podium.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="ActiveMembers" layoutX="56.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font></Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="375.0" layoutY="24.0" prefHeight="200.0" prefWidth="344.0" style="-fx-background-color: linear-gradient(to bottom right, #1638e3, #39c994); -fx-background-radius: 30;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="92.0" prefHeight="32.0" prefWidth="328.0" text="Project Thas Uses Most Machines">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="77.0" fitWidth="83.0" layoutX="135.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Imgs/star.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="ProjectUsesMostMachine" layoutX="48.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font></Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="741.0" layoutY="26.0" prefHeight="200.0" prefWidth="323.0" style="-fx-background-color: linear-gradient(to bottom right, #1638e3, #39c994); -fx-background-radius: 30;">
+                           <children>
+                              <Label layoutX="49.0" layoutY="84.0" prefHeight="47.0" prefWidth="250.0" text="Most Utilized Machine">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="77.0" fitWidth="104.0" layoutX="110.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Imgs/ranking-star.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="MostUtilizedMavhine" layoutX="49.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font></Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ManageProjectsPage" prefHeight="700.0" prefWidth="1115.0" visible="false">
+               <children>
+                  <AnchorPane layoutX="494.0" layoutY="16.0" prefHeight="666.0" prefWidth="606.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0); -fx-background-color: #fff;">
+                     <children>
+                        <Label layoutX="28.0" layoutY="8.0" prefHeight="38.0" prefWidth="196.0" text="Project Table">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="P2_ProjectInfoTable" layoutX="8.0" layoutY="182.0" prefHeight="483.0" prefWidth="590.0">
+                          <columns>
+                            <TableColumn fx:id="ProjectInfo_Machines" prefWidth="589.5999816894531" text="mchines" />
+                          </columns>
+                        </TableView>
+                        <ComboBox fx:id="ListOfProjects" layoutX="263.0" layoutY="34.0" onAction="#listOfProjectsCompo" prefHeight="36.0" prefWidth="290.0" promptText="Choose Project " style="-fx-background-color: #40E0D0;" />
+                        <Label fx:id="ProjectInfo_Status" layoutX="98.0" layoutY="134.0" text="Project Status" textFill="#4834ff" />
+                        <Label fx:id="ProjectInfo_TeamWorkOn" layoutX="371.0" layoutY="134.0" text="Teams Working on" textFill="#0606d4" />
+                        <Label layoutX="70.0" layoutY="96.0" prefHeight="32.0" prefWidth="138.0" text="Project Status">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="268.0" layoutY="96.0" prefHeight="36.0" prefWidth="333.0" text="Teams Working on the Project">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="18.0" layoutY="14.0" prefHeight="328.0" prefWidth="458.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0); -fx-background-color: #fff;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="184.0" style="-fx-background-color: #00FFFF; -fx-background-radius: 0;" text="Add New Project">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="NewProjectName" layoutX="233.0" layoutY="64.0" onKeyPressed="#CheckForWarning" onKeyReleased="#CheckForWarning" prefHeight="48.0" prefWidth="198.0" promptText="New Project Name" />
+                        <Label layoutX="12.0" layoutY="66.0" prefHeight="46.0" prefWidth="206.0" text="Name of Project :">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="AssignedTeamForTheProject" layoutX="232.0" layoutY="150.0" onKeyPressed="#TeamNotFound" onKeyReleased="#TeamNotFound" prefHeight="48.0" prefWidth="198.0" promptText="Team To Do the Project" />
+                        <Label layoutX="15.0" layoutY="153.0" prefHeight="46.0" prefWidth="206.0" text="Assigne to Team :">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="216.0" prefHeight="46.0" prefWidth="206.0" text="Project Description :">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="CreateProjectButton" layoutX="44.0" layoutY="272.0" mnemonicParsing="false" onAction="#createNewProject" prefHeight="39.0" prefWidth="126.0" style="-fx-background-color: #009999;" text="Create Project" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="WarningCreateProject" layoutX="228.0" layoutY="26.0" prefHeight="32.0" prefWidth="203.0" textFill="RED" />
+                        <Label fx:id="ExistedTeamLabel" layoutX="228.0" layoutY="120.0" prefHeight="26.0" prefWidth="202.0" textFill="RED" />
+                        <TextField fx:id="Description" layoutX="233.0" layoutY="227.0" prefHeight="33.0" prefWidth="199.0" promptText="Description" />
+                        <Label fx:id="Project_created_successfully" layoutX="233.0" layoutY="283.0" textFill="#4eff00" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="19.0" layoutY="359.0" prefHeight="190.0" prefWidth="454.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0); -fx-background-color: #fff;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="212.0" style="-fx-background-color: #00FFFF; -fx-background-radius: 0;" text="Mark Project As Done">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ProjectNameFromTable" layoutX="233.0" layoutY="64.0" prefHeight="48.0" prefWidth="198.0" promptText="Choose from the Table" />
+                        <Label layoutX="12.0" layoutY="66.0" prefHeight="46.0" prefWidth="206.0" text="Name of Project :">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="MarkAsDone" layoutX="122.0" layoutY="131.0" mnemonicParsing="false" onAction="#MarkDone" prefHeight="34.0" prefWidth="193.0" style="-fx-background-color: #009999;" text="Mark Done" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="Mark_As_Done_warning" layoutX="233.0" layoutY="27.0" prefHeight="26.0" prefWidth="200.0" textFill="RED" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="18.0" layoutY="561.0" prefHeight="122.0" prefWidth="454.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0); -fx-background-color: #fff;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="212.0" style="-fx-background-color: #00FFFF; -fx-background-radius: 0;" text="Project Information">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="DescriptionLabel" layoutX="19.0" layoutY="53.0" text="Description" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ManageTeamsPage" layoutX="-1.0" layoutY="-1.0" prefHeight="701.0" prefWidth="1115.0" visible="false">
+               <children>
+                  <AnchorPane layoutX="509.0" layoutY="16.0" prefHeight="671.0" prefWidth="593.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);">
+                     <children>
+                        <TableView fx:id="P3_TeamInfoTable" layoutX="8.0" layoutY="209.0" prefHeight="454.0" prefWidth="423.0">
+                          <columns>
+                            <TableColumn fx:id="TeamInfo_MemberName" prefWidth="216.79998779296875" text="Members Names" />
+                              <TableColumn fx:id="TeamInfo_ID" minWidth="0.0" prefWidth="205.59991455078125" text="ID" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="33.0" layoutY="15.0" prefHeight="43.0" prefWidth="176.0" text="Team Tables">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="ListOfTeams" layoutX="269.0" layoutY="74.0" onAction="#listOfTeamsCompo" prefHeight="38.0" prefWidth="288.0" promptText="Choose Team " style="-fx-background-color: #40E0D0;" />
+                        <TableView fx:id="P3_Projects_Table" layoutX="437.0" layoutY="209.0" prefHeight="454.0" prefWidth="147.0">
+                          <columns>
+                            <TableColumn fx:id="TeamInfo_Projects" prefWidth="146.399951171875" text="Projects" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="33.0" layoutY="142.0" prefHeight="43.0" prefWidth="185.0" text="Leader Name: ">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Leader_Name" layoutX="191.0" layoutY="149.0" prefHeight="32.0" prefWidth="145.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="16.0" layoutY="16.0" prefHeight="261.0" prefWidth="476.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="46.0" prefWidth="270.0" style="-fx-background-color: #00FFFF;" text="Add New Member To a Team">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="TeamNameToAddMemberTo" layoutX="21.0" layoutY="130.0" onKeyPressed="#CheckAddNewMemberWarning" onKeyReleased="#CheckAddNewMemberWarning" prefHeight="34.0" prefWidth="171.0" promptText="Team name" />
+                        <TextField fx:id="NameOfTheUserToAddToTeam" layoutX="254.0" layoutY="130.0" onKeyPressed="#CheckAddNewMemberWarning" onKeyReleased="#CheckAddNewMemberWarning" prefHeight="34.0" prefWidth="171.0" promptText="Name Of the member" />
+                        <Button fx:id="AddMemberButton" layoutX="173.0" layoutY="200.0" mnemonicParsing="false" onAction="#AddMember" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: #009999;" text="Add Member" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <Label layoutX="21.0" layoutY="96.0" text="Enter Team Name to Add Member in" />
+                        <Label layoutX="254.0" layoutY="96.0" text="Name of The User" />
+                        <Label fx:id="WarningAddNewMember" layoutX="21.0" layoutY="165.0" prefHeight="27.0" prefWidth="226.0" textFill="RED" />
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="16.0" layoutY="292.0" prefHeight="394.0" prefWidth="476.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="46.0" prefWidth="177.0" style="-fx-background-color: #00FFFF;" text="Creat New Team">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="NewTeamName" layoutX="263.0" layoutY="96.0" prefHeight="34.0" prefWidth="171.0" promptText="Team name" />
+                        <TableView fx:id="P3_ListOfUsers" layoutX="11.0" layoutY="68.0" prefHeight="318.0" prefWidth="211.0">
+                          <columns>
+                            <TableColumn fx:id="UsersList_User" prefWidth="115.99993324279785" text="Users " />
+                              <TableColumn fx:id="UsersList_ID" prefWidth="95.2000732421875" text="ID" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="263.0" layoutY="68.0" text="Enter Team Name " />
+                        <TextField fx:id="NewMemberName" layoutX="262.0" layoutY="210.0" prefHeight="34.0" prefWidth="171.0" promptText="Name Of the member" />
+                        <Label layoutX="261.0" layoutY="188.0" text="Enter The Leader ID" />
+                        <Button fx:id="CreateTeamButton" layoutX="263.0" layoutY="294.0" mnemonicParsing="false" onAction="#CreatTeam" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: #009999;" text="Create Team" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <Label fx:id="Team_not_found" layoutX="263.0" layoutY="139.0" prefHeight="28.0" prefWidth="172.0" textFill="RED" />
+                        <Label fx:id="Team_Creation_message" layoutX="261.0" layoutY="342.0" prefHeight="29.0" prefWidth="174.0" textFill="#27ff00" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ManageMachinesPage" layoutX="-1.0" prefHeight="699.0" prefWidth="1116.0">
+               <children>
+                  <AnchorPane layoutX="573.0" layoutY="18.0" prefHeight="666.0" prefWidth="523.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);">
+                     <children>
+                        <TableView fx:id="P4_MachineTaableView" layoutX="-1.0" layoutY="67.0" onMouseClicked="#getMachinesTebleData" prefHeight="598.0" prefWidth="524.0" style="-fx-background-color: transparent;">
+                          <columns>
+                            <TableColumn fx:id="MachineTaableView_Name" prefWidth="208.7999267578125" text="Name " />
+                              <TableColumn fx:id="MachineTaableView_REInterest" minWidth="0.0" prefWidth="314.4000244140625" text="Research Interest" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="194.0" text="Machines Table">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="17.0" layoutY="18.0" prefHeight="263.0" prefWidth="538.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="454.0" style="-fx-background-color: #00FFFF;" text="Machine Reservation and Assignment">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="MachineNameReservation" layoutX="102.0" layoutY="65.0" prefHeight="38.0" prefWidth="151.0" promptText="Machine Name" />
+                        <TextField fx:id="ProjectToAssighnMachine" layoutX="372.0" layoutY="65.0" prefHeight="38.0" prefWidth="151.0" promptText="Project Name" />
+                        <TextField fx:id="StartHour" layoutX="102.0" layoutY="132.0" prefHeight="38.0" prefWidth="151.0" promptText="Start Hour" />
+                        <DatePicker fx:id="DateProvider" layoutX="102.0" layoutY="207.0" onAction="#getDate" prefHeight="26.0" prefWidth="150.0" promptText="Pick Date" />
+                        <TextField fx:id="EndHour" layoutX="372.0" layoutY="131.0" prefHeight="38.0" prefWidth="151.0" promptText="End Hour" />
+                        <Label layoutX="14.0" layoutY="76.0" text="Machine Name" />
+                        <Label layoutX="14.0" layoutY="142.0" text="Start Hour" />
+                        <Label layoutX="295.0" layoutY="142.0" text="End hour" />
+                        <Label layoutX="259.0" layoutY="69.0" prefHeight="30.0" prefWidth="119.0" text="Project to Assighn" />
+                        <Label layoutX="14.0" layoutY="211.0" text="Pick Date" />
+                        <Button fx:id="AssignMachineToProjectButton" layoutX="343.0" layoutY="212.0" mnemonicParsing="false" onAction="#AssignMachineToProject" prefHeight="33.0" prefWidth="151.0" style="-fx-background-color: #009999;" text="Assign Machine" textFill="WHITE" />
+                        <Label fx:id="Check_reservation_label" layoutX="343.0" layoutY="181.0" textFill="#ff0505" />
+                        <Label fx:id="Machine_not_Found" layoutX="102.0" layoutY="40.0" prefHeight="26.0" prefWidth="152.0" textFill="RED" />
+                        <Label fx:id="Project_not_Found" layoutX="372.0" layoutY="40.0" prefHeight="26.0" prefWidth="152.0" textFill="RED" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="16.0" layoutY="293.0" prefHeight="214.0" prefWidth="540.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="390.0" style="-fx-background-color: #00FFFF;" text="Machine's Current Reservations">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="P4_CurrentReservationTable" layoutY="40.0" prefHeight="170.0" prefWidth="314.0" style="-fx-background-color: transparent;">
+                          <columns>
+                            <TableColumn fx:id="CurrentReservationTable_Date" prefWidth="104.79998970031738" text="Date" />
+                            <TableColumn fx:id="CurrentReservationTable_Start" prefWidth="93.59996795654297" text="Starting Hour" />
+                              <TableColumn fx:id="CurrentReservationTable_Finish" prefWidth="116.0" text="Finishing Hour" />
+                          </columns>
+                        </TableView>
+                        <Text fx:id="MachineChoosenToSeeReservations" layoutX="323.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine Name" wrappingWidth="173.00155639648438">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="17.0" layoutY="516.0" prefHeight="167.0" prefWidth="538.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="251.0" style="-fx-background-color: #00FFFF;" text="Create New Machine">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="NewMachineName" layoutX="126.0" layoutY="59.0" prefHeight="34.0" prefWidth="156.0" promptText="New Machine Name" />
+                        <TextField fx:id="NewMachineID" layoutX="126.0" layoutY="108.0" prefHeight="34.0" prefWidth="156.0" promptText="Machine ID " />
+                        <Button fx:id="CreateNewMachineButton" layoutX="433.0" layoutY="108.0" mnemonicParsing="false" onAction="#CreateNewMachine" prefHeight="33.0" prefWidth="90.0" style="-fx-background-color: #009999;" text="Create" textFill="WHITE" />
+                        <Label layoutX="14.0" layoutY="59.0" prefHeight="34.0" prefWidth="100.0" text="Machine Name" />
+                        <Label layoutX="14.0" layoutY="108.0" prefHeight="34.0" prefWidth="100.0" text="Machine ID" />
+                        <Label layoutX="294.0" layoutY="23.0" prefHeight="34.0" prefWidth="100.0" text="ReSearch Interest" />
+                        <TextField fx:id="ResearchIntereset" layoutX="294.0" layoutY="60.0" prefHeight="32.0" prefWidth="150.0" promptText="Research Interest" />
+                        <Label fx:id="Chech_machine_creation" layoutX="294.0" layoutY="111.0" prefHeight="32.0" prefWidth="135.0" textFill="RED" />
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

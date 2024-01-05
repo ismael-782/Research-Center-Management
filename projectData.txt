@@ -1,0 +1,9 @@
+ForecastX,true,Team1,prediction forecast
+ErrorMinimizer,true,Team1,minimize error
+ErrorMaximizer,false,Team2,maximize error
+DataAnalyzer,true,Team2,analyze data
+ProcessOptimizer,true,Team3,optimize process
+ResultValidator,true,Team1,validate results
+AlgorithmImplementation,false,Team4,implement algorithm
+PerformanceEvaluator,true,Team5,evaluate performance
+project1,false,Team2,awalow

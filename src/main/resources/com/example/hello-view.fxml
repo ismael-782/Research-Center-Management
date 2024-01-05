@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="1293.0" style="-fx-background-color: #FDF7E4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.MemberPage">
+   <children>
+      <AnchorPane fx:id="userPane" layoutX="-1.0" layoutY="165.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="1295.0" visible="false">
+         <children>
+            <Label alignment="CENTER" layoutX="122.0" layoutY="40.0" prefHeight="85.0" prefWidth="994.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20; -fx-border-color: BBAB8C; -fx-border-radius: 16; -fx-border-width: 12;" text=" Your Teams" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+            <ScrollPane hbarPolicy="NEVER" layoutX="125.0" layoutY="116.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="353.0" prefWidth="989.0" style="-fx-background-radius: 300; -fx-background-color: DED0B6; -fx-border-color: BBAB8C; -fx-border-width: 10; -fx-border-radius: 10;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="941.0" style="-fx-background-radius: 0;">
+                     <children>
+                        <AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="587.0" prefWidth="945.0">
+                           <children>
+                              <AnchorPane fx:id="team1Pane" layoutX="38.0" layoutY="31.0" onMouseClicked="#changeToP2" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="157.0" prefWidth="275.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20;">
+                                 <children>
+                                    <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="18.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/users-alt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="81.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/user-crown.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="paneTeamName1" layoutX="79.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Name" textAlignment="CENTER" wrappingWidth="154.35894775390625">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="paneLeaderName1" layoutX="109.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leader Name">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="team2Pane" layoutX="342.0" layoutY="33.0" onMouseClicked="#changeToP2" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="157.0" prefWidth="275.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20;">
+                                 <children>
+                                    <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="18.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/users-alt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="81.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/user-crown.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="paneTeamName2" layoutX="79.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Name" textAlignment="CENTER" wrappingWidth="154.35894775390625">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="paneLeaderName2" layoutX="120.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leader Name">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="team3Pane" layoutX="644.0" layoutY="34.0" onMouseClicked="#changeToP2" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="157.0" prefWidth="275.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20;">
+                                 <children>
+                                    <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="18.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/users-alt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="81.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/user-crown.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="paneTeamName3" layoutX="79.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Name" textAlignment="CENTER" wrappingWidth="154.35894775390625">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="paneLeaderName3" layoutX="122.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leader Name">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="team4Pane" layoutX="37.0" layoutY="209.0" onMouseClicked="#changeToP2" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="157.0" prefWidth="275.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20;">
+                                 <children>
+                                    <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="18.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/users-alt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="81.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/user-crown.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="paneTeamName4" layoutX="79.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Name" textAlignment="CENTER" wrappingWidth="154.35894775390625">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="paneLeaderName4" layoutX="119.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leader Name">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="team5Pane" layoutX="341.0" layoutY="211.0" onMouseClicked="#changeToP2" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="157.0" prefWidth="275.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20;">
+                                 <children>
+                                    <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="18.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/users-alt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="81.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/user-crown.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="paneTeamName5" layoutX="79.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Name" textAlignment="CENTER" wrappingWidth="154.35894775390625">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="paneLeaderName5" layoutX="119.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leader Name">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="team6Pane" layoutX="643.0" layoutY="212.0" onMouseClicked="#changeToP2" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="157.0" prefWidth="275.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20;">
+                                 <children>
+                                    <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="18.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/users-alt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="81.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/user-crown.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="paneTeamName6" layoutX="79.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Name" textAlignment="CENTER" wrappingWidth="154.35894775390625">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="paneLeaderName6" layoutX="119.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leader Name">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="team9Pane" layoutX="37.0" layoutY="388.0" onMouseClicked="#changeToP2" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="157.0" prefWidth="275.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20;">
+                                 <children>
+                                    <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="18.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/users-alt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="81.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/user-crown.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="paneTeamName41" layoutX="79.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Name" textAlignment="CENTER" wrappingWidth="154.35894775390625">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="paneLeaderName41" layoutX="114.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leader Name">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="team8Pane" layoutX="341.0" layoutY="390.0" onMouseClicked="#changeToP2" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="157.0" prefWidth="275.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20;">
+                                 <children>
+                                    <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="18.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/users-alt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="81.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/user-crown.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="paneTeamName51" layoutX="79.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Name" textAlignment="CENTER" wrappingWidth="154.35894775390625">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="paneLeaderName51" layoutX="115.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leader Name">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="team7Pane" layoutX="643.0" layoutY="391.0" onMouseClicked="#changeToP2" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="157.0" prefWidth="275.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20;">
+                                 <children>
+                                    <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="18.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/users-alt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="81.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/user-crown.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="paneTeamName62" layoutX="79.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team Name" textAlignment="CENTER" wrappingWidth="154.35894775390625">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="paneLeaderName62" layoutX="121.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leader Name">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="teamPane" layoutX="3.0" layoutY="5.0" prefHeight="657.0" prefWidth="1244.0">
+         <children>
+          <AnchorPane layoutX="-32.0" layoutY="245.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="392.0">
+               <children>
+                  <AnchorPane fx:id="leaderPane" layoutX="46.0" layoutY="11.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #FFA732; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user-crown.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="leaderText" layoutX="47.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leader Name" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="memberPane2" layoutX="45.0" layoutY="58.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user (1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="MemberNameText2" layoutX="47.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="memberPane4" layoutX="45.0" layoutY="105.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user (1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="MemberNameText4" layoutX="47.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="memberPane6" layoutX="46.0" layoutY="154.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user (1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="MemberNameText6" layoutX="47.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="memberPane8" layoutX="45.0" layoutY="201.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user (1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="MemberNameText8" layoutX="47.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="memberPane1" layoutX="214.0" layoutY="11.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user (1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="MemberNameText1" layoutX="47.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="memberPane3" layoutX="214.0" layoutY="58.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user (1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="MemberNameText3" layoutX="47.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="memberPane5" layoutX="215.0" layoutY="107.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user (1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="MemberNameText5" layoutX="47.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="memberPane7" layoutX="214.0" layoutY="154.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user (1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="MemberNameText7" layoutX="47.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="memberPane9" layoutX="215.0" layoutY="202.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showInfo" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/user (1).png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="MemberNameText9" layoutX="47.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Label alignment="CENTER" layoutX="850.0" layoutY="168.0" prefHeight="55.0" prefWidth="372.0" style="-fx-background-color: FFC5C5; -fx-background-radius: 10;" text=" Team Projects " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="ProjectPane1" layoutX="900.0" layoutY="246.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeToP3" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="60.0" prefWidth="274.0" style="-fx-background-color: FFEBD8; -fx-background-radius: 20; -fx-border-color: FFC5C5; -fx-border-radius: 20; -fx-border-width: 9;">
+               <children>
+                  <Label fx:id="projectNameLabel1" layoutX="51.0" layoutY="8.0" prefHeight="46.0" prefWidth="211.0" text=" Team Projects " textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="24.0" fitWidth="35.0" layoutX="26.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/diagram-project.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="181.0" prefHeight="63.0" prefWidth="334.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20; -fx-border-color: BBAB8C; -fx-border-radius: 16; -fx-border-width: 12;" text="Members" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="ProjectPane2" layoutX="902.0" layoutY="325.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeToP3" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="60.0" prefWidth="274.0" style="-fx-background-color: FFEBD8; -fx-background-radius: 20; -fx-border-color: FFC5C5; -fx-border-radius: 20; -fx-border-width: 9;">
+               <children>
+                  <Label fx:id="projectNameLabel2" layoutX="54.0" layoutY="8.0" prefHeight="46.0" prefWidth="203.0" text=" Team Projects " textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="38.0" layoutX="28.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/diagram-project.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ProjectPane3" layoutX="901.0" layoutY="406.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeToP3" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="60.0" prefWidth="274.0" style="-fx-background-color: FFEBD8; -fx-background-radius: 20; -fx-border-color: FFC5C5; -fx-border-radius: 20; -fx-border-width: 9;">
+               <children>
+                  <Label fx:id="projectNameLabel3" layoutX="54.0" layoutY="8.0" prefHeight="46.0" prefWidth="203.0" text=" Team Projects " textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="38.0" layoutX="28.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/diagram-project.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ProjectPane4" layoutX="903.0" layoutY="484.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeToP3" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="60.0" prefWidth="274.0" style="-fx-background-color: FFEBD8; -fx-background-radius: 20; -fx-border-color: FFC5C5; -fx-border-radius: 20; -fx-border-width: 9;">
+               <children>
+                  <Label fx:id="projectNameLabel4" layoutX="54.0" layoutY="8.0" prefHeight="46.0" prefWidth="203.0" text=" Team Projects " textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="38.0" layoutX="28.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/diagram-project.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ProjectPane5" layoutX="904.0" layoutY="564.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeToP3" onMouseEntered="#activateTeamPane1" onMouseExited="#deactivateTeamPane1" prefHeight="60.0" prefWidth="274.0" style="-fx-background-color: FFEBD8; -fx-background-radius: 20; -fx-border-color: FFC5C5; -fx-border-radius: 20; -fx-border-width: 9;">
+               <children>
+                  <Label fx:id="projectNameLabel5" layoutX="53.0" layoutY="8.0" onMouseClicked="#changeToP3" prefHeight="46.0" prefWidth="196.0" text=" Team Projects " textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="38.0" layoutX="28.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/diagram-project.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="363.0" layoutY="253.0" prefHeight="236.0" prefWidth="442.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 20; -fx-border-color: BBAB8C; -fx-border-radius: 16; -fx-border-width: 9;">
+               <children>
+                  <Text fx:id="infoText" layoutX="27.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="392.0">
+                     <font>
+                        <Font name="Eras Bold ITC" size="20.0" />
+                     </font>
+                  </Text>
+               </children></AnchorPane>
+            <Label alignment="CENTER" layoutX="363.0" layoutY="181.0" prefHeight="63.0" prefWidth="334.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20; -fx-border-color: BBAB8C; -fx-border-radius: 16; -fx-border-width: 12;" text="Teammate Info" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="projectPane" layoutX="-5.0" layoutY="-3.0" prefHeight="668.0" prefWidth="1321.0" visible="false">
+         <children>
+            <AnchorPane layoutX="840.0" layoutY="34.0" prefHeight="607.0" prefWidth="371.0">
+               <children>
+                  <AnchorPane layoutX="283.0" layoutY="172.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="123.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 200; -fx-border-color: BBAB8C; -fx-border-radius: 200; -fx-border-width: 5;">
+                     <children>
+                        <Label fx:id="mahcinesCountLabel" alignment="CENTER" layoutX="58.0" layoutY="8.0" prefHeight="34.0" prefWidth="58.0" text="29" textAlignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="projectMachinesTableView" layoutX="51.0" layoutY="202.0" prefHeight="406.0" prefWidth="288.0" style="-fx-background-color: #FDF7E4;">
+                    <columns>
+                      <TableColumn fx:id="MachinesColumn" prefWidth="286.66668701171875" text="Machines" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="BOTTOM_CENTER" layoutX="46.0" layoutY="164.0" prefHeight="63.0" prefWidth="298.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Machines" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="projectNameLabelTitle" alignment="CENTER" layoutX="46.0" layoutY="107.0" prefHeight="38.0" prefWidth="298.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Project Name" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-6.0" layoutY="173.0" prefHeight="206.0" prefWidth="633.0" style="-fx-background-color: DED0B6; -fx-background-radius: 10; -fx-border-color: #BBAB8C; -fx-border-radius: 8; -fx-border-width: 10;">
+               <children>
+                  <Label layoutX="8.0" layoutY="9.0" prefHeight="45.0" prefWidth="311.0" style="-fx-background-color: #BBAB8C; -fx-background-radius: 5;" text=" Projcet Description">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="projcetDescriptionText" layoutX="21.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We're developing a user-friendly mobile app, DIY Home Garden Planner, to assist home gardeners in plant selection and provide gardening tips and reminders." wrappingWidth="583.9144668579102">
+                     <font>
+                        <Font name="Leelawadee UI Bold" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="statusPaneB" layoutX="-1.0" layoutY="376.0" prefHeight="68.0" prefWidth="432.0" style="-fx-background-color: #BBAB8C; -fx-background-radius: 10;">
+               <children>
+                  <Label layoutX="13.0" layoutY="10.0" prefWidth="189.0" text="Project Status">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="statusPaneS" layoutX="212.0" layoutY="11.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changStatus" prefHeight="46.0" prefWidth="207.0" style="-fx-background-color: DED0B6; -fx-background-radius: 10;">
+                     <children>
+                        <ImageView fx:id="completedImage" fitHeight="32.0" fitWidth="33.0" layoutX="146.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../Images/checkbox.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="statusLabel" layoutX="17.0" layoutY="4.0" prefHeight="34.0" prefWidth="145.0" text="Incompleted">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="incompletedImage" fitHeight="32.0" fitWidth="33.0" layoutX="166.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/time-delete.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="459.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeToP4" prefHeight="55.0" prefWidth="329.0" style="-fx-background-color: BBAB8C; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Reserve a new machine" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="machinePane" layoutX="-2.0" layoutY="-6.0" prefHeight="667.0" prefWidth="1298.0" visible="false">
+         <children>
+            <AnchorPane layoutX="-7.0" layoutY="141.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="1194.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: #BBAB8C; -fx-border-radius: 5; -fx-border-width: 9;">
+               <children>
+                  <TextField fx:id="startHourTextField" layoutX="232.0" layoutY="174.0" prefHeight="55.0" prefWidth="370.0" promptText="Enter one integar such as 2" style="-fx-background-color: #DED0B6;">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="EndHourTextField" layoutX="233.0" layoutY="253.0" prefHeight="55.0" prefWidth="376.0" promptText="Enter one integar such as 23" style="-fx-background-color: #DED0B6;">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" layoutX="597.0" layoutY="74.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="298.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Machine Reservations" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="machineReservationsTable" layoutX="602.0" layoutY="121.0" prefHeight="400.0" prefWidth="287.0" style="-fx-background-color: #DED0B6;">
+                     <columns>
+                        <TableColumn fx:id="dateColumn" prefWidth="123.1112060546875" text="Date" />
+                        <TableColumn fx:id="startTimeColumn" prefWidth="78.66668701171875" text="Start Hour" />
+                        <TableColumn fx:id="endTimeColumn" prefWidth="85.33331298828125" text="End Hour" />
+                     </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="597.0" layoutY="68.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="298.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Machine Reservations" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="223.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Reservation For:" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reservationForLabel" layoutX="244.0" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="347.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-radius: 5; -fx-border-width: 5;" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="176.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="223.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Start hour" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="253.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="223.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="End hour" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="335.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="223.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Date" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="datPicker" cache="true" layoutX="244.0" layoutY="335.0" prefHeight="54.0" prefWidth="335.0" style="-fx-background-color: BBAB8C; -fx-border-color: BBAB8C; -fx-border-radius: 10; -fx-border-width: 3;" />
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="412.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#reserveNewMachine" prefHeight="55.0" prefWidth="223.0" style="-fx-background-color: BBAB8C; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Reserve" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="601.0" layoutY="115.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="127.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Date" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="725.0" layoutY="115.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="85.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Start Hour" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="806.0" layoutY="115.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="85.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="End Hour" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="worningText1" fill="RED" layoutX="356.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="worningText2" fill="RED" layoutX="355.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="worningText3" fill="RED" layoutX="355.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="worningText4" fill="RED" layoutX="302.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="worningText5" fill="RED" layoutX="688.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="883.0" layoutY="148.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="304.0" style="-fx-border-color: BBAB8C; -fx-border-width: 10;">
+               <children>
+                  <TableView fx:id="allMachinesTableView" layoutX="11.0" layoutY="153.0" onMouseClicked="#choseMachine" onSort="#choseMachine" prefHeight="356.0" prefWidth="284.0" style="-fx-background-color: #DED0B6;">
+                     <columns>
+                        <TableColumn fx:id="nameColumn" prefWidth="94.3333740234375" text="name" />
+                        <TableColumn fx:id="RIColumn" prefWidth="188.99993896484375" text="Research Interest" />
+                     </columns>
+                  </TableView>
+                  <Label alignment="BOTTOM_CENTER" layoutX="1.0" layoutY="85.0" prefHeight="63.0" prefWidth="298.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="237.0" layoutY="61.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="123.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 200; -fx-border-color: BBAB8C; -fx-border-radius: 200; -fx-border-width: 5;" visible="false">
+                     <children>
+                        <Label alignment="CENTER" layoutX="58.0" layoutY="8.0" prefHeight="34.0" prefWidth="58.0" text="29" textAlignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label alignment="BOTTOM_CENTER" layoutY="53.0" prefHeight="63.0" prefWidth="298.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="All Machines" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="projectNameLabel_2" alignment="CENTER" layoutY="-4.0" prefHeight="38.0" prefWidth="298.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Project Name" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="searchingTextFieldP4" alignment="CENTER" layoutX="9.0" layoutY="117.0" onAction="#dropSearch" onKeyPressed="#dropSearch" onKeyReleased="#dropSearch" prefHeight="24.0" prefWidth="284.0" promptText="Search for Machine" style="-fx-background-color: #DED0B6;">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" layoutX="6.0" layoutY="146.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="103.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Name" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="105.0" layoutY="146.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="193.0" style="-fx-background-color: #DED0B6; -fx-background-radius: 10; -fx-border-color: BBAB8C; -fx-border-radius: 5; -fx-border-width: 5;" text="Research Interest" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="home" layoutX="-73.0" prefHeight="163.0" prefWidth="964.0" style="-fx-background-color: #BBAB8C; -fx-background-radius: 200; -fx-border-color: #DED0B6; -fx-border-radius: 200; -fx-border-width: 8;">
+         <children>
+            <ImageView fx:id="userImage" fitHeight="80.0" fitWidth="80.0" layoutX="80.0" layoutY="39.0">
+               <image>
+                  <Image url="@../Images/user (1).png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="317.0" layoutY="20.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="127.0" prefWidth="591.0" style="-fx-background-color: DED0B6; -fx-background-radius: 20;">
+               <children>
+                  <AnchorPane fx:id="teamIconPane" layoutX="443.0" layoutY="20.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeToP2" onMouseEntered="#activateTeamIcon" onMouseExited="#deactivateTeamIcon" prefHeight="97.0" prefWidth="108.0" style="-fx-background-color: #BBAB8C; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fx:id="teamImage" fitHeight="60.0" fitWidth="60.0" layoutX="24.0" layoutY="11.0">
+                           <image>
+                              <Image url="@../Images/users-alt.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="29.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Team" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="teamIconPane1" layoutX="244.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeToP3" onMouseEntered="#activateProjectsIcon" onMouseExited="#deactivateProjectsIcon" prefHeight="97.0" prefWidth="108.0" style="-fx-background-color: #BBAB8C; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fx:id="projectImage" fitHeight="55.0" fitWidth="55.0" layoutX="25.0" layoutY="7.0">
+                           <image>
+                              <Image url="@../Images/diagram-project.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="24.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="teamIconPane11" layoutX="56.0" layoutY="17.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeToP4" onMouseEntered="#activateMachineIcon" onMouseExited="#deactivateMachineIcon" prefHeight="97.0" prefWidth="108.0" style="-fx-background-color: #BBAB8C; -fx-background-radius: 20;">
+                     <children>
+                        <ImageView fx:id="machineImage" fitHeight="55.0" fitWidth="55.0" layoutX="26.0" layoutY="5.0">
+                           <image>
+                              <Image url="@../Images/process.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="17.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machines" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Text fx:id="memberText" layoutX="168.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="59.99999999999994">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="IDtext" layoutX="168.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="emailText" layoutX="168.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="RIText" layoutX="168.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="80.0" layoutY="44.0" onMouseClicked="#changeToP1" onMouseEntered="#UserInfoDisplay" onMouseExited="#UserInformative" prefHeight="70.0" prefWidth="80.0" />
+            <Label fx:id="userNameLabel" alignment="CENTER" layoutX="42.0" layoutY="121.0" prefHeight="36.0" prefWidth="155.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="483.0" prefWidth="488.0" style="-fx-background-color: #F6F1F1; -fx-background-radius: 30; -fx-border-color: #19A7CE; -fx-border-radius: 25; -fx-border-width: 10;" visible="false">
+         <children>
+            <TableView fx:id="table" layoutX="19.0" layoutY="72.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="391.0" prefWidth="442.0" style="-fx-background-color: #19A7CE; -fx-border-width: 0; -fx-background-radius: 30; -fx-border-radius: 10; -fx-border-color: #146C94; -fx-border-width: 5;">
+              <columns>
+                <TableColumn fx:id="C_Name" prefWidth="164.2222137451172" text="Team Name" />
+                <TableColumn fx:id="C_ID" prefWidth="83.11111450195312" text="ID" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Text fx:id="IDMustBeNum" fill="RED" layoutX="186.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="80.07257080078125">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Text>
+            <TextField fx:id="searchField" alignment="CENTER" layoutX="19.0" layoutY="42.0" onKeyPressed="#dropSearch" onKeyReleased="#dropSearch" prefHeight="25.0" prefWidth="155.0" promptText="Enter project name" style="-fx-background-color: #F6F1F1;" />
+            <TextField fx:id="searchField1" alignment="CENTER" layoutX="182.0" layoutY="42.0" onKeyPressed="#dropSearch2" onKeyReleased="#dropSearch2" prefHeight="25.0" prefWidth="82.0" promptText="Enter project ID" style="-fx-background-color: #F6F1F1;" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="mainLabel" alignment="CENTER" layoutX="848.0" layoutY="33.0" prefHeight="112.0" prefWidth="372.0" style="-fx-background-color: BBAB8C; -fx-background-radius: 10;" text="Home" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
+
